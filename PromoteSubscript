@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="th" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Go Go Trader - 7 เครื่องมืออัจฉริยะและแพ็กเกจการใช้งาน</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        dark: {
+                            900: '#0b0f19',
+                            800: '#111827',
+                            700: '#1f2937',
+                            600: '#374151',
+                        },
+                        brand: {
+                            DEFAULT: '#10b981',
+                            dark: '#059669',
+                            light: '#34d399',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Prompt', sans-serif; }
+    </style>
+</head>
+<body class="bg-dark-900 text-gray-100 antialiased selection:bg-brand selection:text-white">
+
+    <!-- Header / Navbar -->
+    <header class="sticky top-0 z-50 backdrop-blur-md bg-dark-900/80 border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand to-blue-500 flex items-center justify-center font-bold text-xl text-white shadow-lg shadow-brand/20">
+                    GT
+                </div>
+                <span class="text-xl font-bold tracking-tight">Go Go Trader</span>
+            </div>
+            <div class="text-sm font-medium text-brand bg-brand/10 border border-brand/20 px-4 py-1.5 rounded-full">
+                Stock Analysis & AI Alert Platform
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative overflow-hidden py-20 lg:py-28">
+        <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-brand/10 via-dark-900 to-dark-900 pointer-events-none"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <div class="inline-flex items-center space-x-2 bg-dark-800 border border-gray-700/60 rounded-full px-4 py-1.5 mb-6 text-xs sm:text-sm text-brand-light">
+                <span class="animate-pulse">🚀</span>
+                <span>ให้ AI ช่วยเฝ้าตลาด ให้คุณมีเวลาใช้ชีวิตมากขึ้น</span>
+            </div>
+            <h1 class="text-4xl sm:text-6xl font-bold tracking-tight max-w-4xl mx-auto leading-tight mb-6">
+                7 เครื่องมือทรงพลัง <br class="hidden sm:inline"><span class="text-transparent bg-clip-text bg-gradient-to-r from-brand via-emerald-400 to-blue-500">ที่ช่วยให้การลงทุนเป็นระบบมากขึ้น</span>
+            </h1>
+            <p class="text-lg sm:text-xl text-gray-400 max-w-3xl mx-auto mb-6 font-light leading-relaxed">
+                เทรดอย่างมีข้อมูล เหมือนมีนักวิเคราะห์ส่วนตัวและผู้ช่วยรวบรวมข้อมูลอยู่ข้างคุณ ลดภาระการเปิดกราฟและเฝ้าราคาตลอดทั้งวัน
+            </p>
+        </div>
+    </section>
+
+    <!-- 7 Tools Section (Alternating Layout) -->
+    <section class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-24">
+
+        <!-- Tool 1: Price Alert (มีรูปภาพจริง) -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-dark-800/60 border border-gray-800 p-8 sm:p-10 rounded-3xl">
+            <div class="lg:col-span-5 bg-dark-900 border border-gray-700/60 rounded-2xl overflow-hidden shadow-xl flex items-center justify-center p-2">
+                <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=800&q=80" alt="ระบบ Price Alert" class="rounded-xl w-full h-auto object-cover max-h-80">
+            </div>
+            <div class="lg:col-span-7 space-y-4">
+                <div class="inline-block bg-orange-500/10 text-orange-400 text-xs font-semibold px-3 py-1 rounded-full">เครื่องมือที่ 1</div>
+                <h3 class="text-2xl font-bold text-gray-100">ระบบ Price Alert – ไม่ต้องเฝ้าราคาเองตลอดวัน</h3>
+                <p class="text-gray-300 text-base leading-relaxed">
+                    กำหนดราคาที่คุณต้องการได้ด้วยตัวเอง เมื่อหุ้นถึงเงื่อนไขราคาที่ตั้งไว้ ระบบจะแจ้งเตือนผ่าน LINE ช่วยให้คุณไม่ต้องเปิดหน้าจอคอยตรวจสอบราคาอยู่ตลอดเวลา
+                </p>
+            </div>
+        </div>
+
+        <!-- Tool 2: AI %CMPR (มีรูปภาพจริง) -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-dark-800/60 border border-gray-800 p-8 sm:p-10 rounded-3xl">
+            <div class="lg:col-span-5 bg-dark-900 border border-gray-700/60 rounded-2xl overflow-hidden shadow-xl flex items-center justify-center p-2 lg:order-last">
+                <img src="https://images.unsplash.com/photo-1642543492481-44e81e3914a7?auto=format&fit=crop&w=800&q=80" alt="ระบบ AI %CMPR" class="rounded-xl w-full h-auto object-cover max-h-80">
+            </div>
+            <div class="lg:col-span-7 space-y-4 lg:order-first">
+                <div class="inline-block bg-emerald-500/10 text-emerald-400 text-xs font-semibold px-3 py-1 rounded-full">เครื่องมือที่ 2</div>
+                <h3 class="text-2xl font-bold text-gray-100">💝 ระบบ AI %CMPR – เรดาร์จับหุ้น Volume พุ่ง</h3>
+                <ul class="space-y-2 text-sm text-gray-300">
+                    <li class="flex items-start"><span class="text-emerald-400 mr-2">•</span> คัดเลือกหุ้นที่มี %CMPR สูงสุด 30 อันดับแรกของวัน</li>
+                    <li class="flex items-start"><span class="text-emerald-400 mr-2">•</span> นำเส้น EMA12 และ EMA30 วิเคราะห์แนวโน้มและหาผลต่างความลาดชันทั้ง 2 เส้นเพื่อให้ AI อธิบายพฤติกรรมย้อนหลังและกำหนดแนวโน้มของ trend</li>
+                    <li class="flex items-start"><span class="text-emerald-400 mr-2">•</span> ใช้ Heikin Ashi ช่วยตรวจสอบความต่อเนื่องของแนวโน้มและตรวจสอบสีแท่งล่าสุดของ Heikin Ashi เพื่อลด Noise ที่เกิดขึ้น</li>
+                    <li class="flex items-start"><span class="text-emerald-400 mr-2">•</span> รวมคะแนนจาก Indicators เป็น AI-Score เต็ม 10 คะแนน</li>
+                    <li class="flex items-start"><span class="text-emerald-400 mr-2">•</span> AI ช่วยอธิบายความหมายของคะแนนและ Indicators เพื่อให้เข้าใจหุ้นแต่ละตัวได้ง่ายขึ้น</li>
+                </ul>
+                <p class="text-sm text-brand-light font-medium pt-2">
+                    ช่วยให้คุณสังเกตหุ้นที่มีปริมาณซื้อขายโดดเด่น และนำไปศึกษาต่อว่ามีแนวโน้มอย่างไร โดยไม่ต้องไล่ตรวจหุ้นทั้งตลาดด้วยตัวเอง
+                </p>
+            </div>
+        </div>
+
+        <!-- Tool 3: AI ZoneBreakOut -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-dark-800/60 border border-gray-800 p-8 sm:p-10 rounded-3xl">
+            <div class="lg:col-span-5 bg-dark-900 border border-gray-700/60 rounded-2xl h-72 flex items-center justify-center text-gray-500 relative overflow-hidden">
+                <div class="absolute inset-0 bg-gradient-to-br from-brand/10 to-transparent flex items-center justify-center text-center p-6">
+                    <div>
+                        <div class="text-4xl mb-2">🎀</div>
+                        <span class="text-sm font-medium text-gray-400">รูปภาพจำลอง: AI ZoneBreakOut</span>
+                    </div>
+                </div>
+            </div>
+            <div class="lg:col-span-7 space-y-4">
+                <div class="inline-block bg-brand/10 text-brand text-xs font-semibold px-3 py-1 rounded-full">เครื่องมือที่ 3</div>
+                <h3 class="text-2xl font-bold text-gray-100">🎀 AI ZoneBreakOut – ค้นหาหุ้นในจังหวะที่น่าจับตา</h3>
+                <ul class="space-y-2 text-sm text-gray-300">
+                    <li class="flex items-start"><span class="text-brand mr-2">•</span> แบ่งมุมมองเป็น High Zone และ Low Zone เทียบกับกรอบสูงสุดและต่ำสุด 52 สัปดาห์ เพื่อแยกวิเคราะห์พฤติกรรมของหุ้นว่ามีแนวโน้มการ Breakout หรือหุ้นเริ่มกลับตัวแสดงสัญญาณ Initial Divergence</li>
+                    <li class="flex items-start"><span class="text-brand mr-2">•</span> ใช้ LSMA และ DEMA ซึ่งลด noise ของสัญญาณหลอกได้ดีกว่า SMA และ EMA มาวิเคราะห์</li>
+                    <li class="flex items-start"><span class="text-brand mr-2">•</span> จับสัญญาณความ slope ของ LSMA และเปอร์เซ็นต์ความแตกต่างระหว่าง LSMA กับ DEMA</li>
+                    <li class="flex items-start"><span class="text-brand mr-2">•</span> กรองราคาที่อยู่เหนือ LSMA เท่านั้น และตรวจสอบซ้ำว่าแท่งเทียนต้องอยู่เหนือ EMA(50)</li>
+                    <li class="flex items-start"><span class="text-brand mr-2">•</span> ใช้ MACD ที่มีสัญญาณ Upsignal และตรวจสอบอายุความต่อเนื่อง และ Heikin Ashi ช่วยตรวจสอบสัญญาณซ้ำ</li>
+                    <li class="flex items-start"><span class="text-brand mr-2">•</span> คัดกรองหุ้นที่เริ่มมีสัญญาณ Divergence และ Indicators เปลี่ยนเป็นบวก</li>
+                </ul>
+                <p class="text-sm text-brand-light font-medium pt-2">
+                    ช่วยค้นหาหุ้นที่อาจกำลังเปลี่ยนแนวโน้ม หรือกำลังเข้าใกล้จังหวะ Breakout เพื่อให้คุณมีรายชื่อหุ้นสำหรับติดตามก่อนตัดสินใจ
+                </p>
+            </div>
+        </div>
+
+        <!-- Tool 4: SuperTrend / FollowTrend -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-dark-800/60 border border-gray-800 p-8 sm:p-10 rounded-3xl">
+            <div class="lg:col-span-5 bg-dark-900 border border-gray-700/60 rounded-2xl h-72 flex items-center justify-center text-gray-500 relative overflow-hidden lg:order-last">
+                <div class="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-transparent flex items-center justify-center text-center p-6">
+                    <div>
+                        <div class="text-4xl mb-2">⛵</div>
+                        <span class="text-sm font-medium text-gray-400">รูปภาพจำลอง: SuperTrend / FollowTrend</span>
+                    </div>
+                </div>
+            </div>
+            <div class="lg:col-span-7 space-y-4 lg:order-first">
+                <div class="inline-block bg-blue-500/10 text-blue-400 text-xs font-semibold px-3 py-1 rounded-full">เครื่องมือที่ 4 (Flagship Feature)</div>
+                <h3 class="text-2xl font-bold text-gray-100">⛵ SuperTrend / FollowTrend – ระบบติดตามแนวโน้มหุ้นอัตโนมัติ</h3>
+                <p class="text-sm text-gray-300">
+                    ฟีเจอร์เรือธงสำหรับสมาชิก Ultimate แทนที่จะต้องคอยเปิดกราฟดูหุ้นตัวเดิมทุกวัน ให้ระบบช่วยติดตามหุ้นที่คุณสนใจ
+                </p>
+                <ul class="space-y-2 text-sm text-gray-300">
+                    <li class="flex items-start"><span class="text-blue-400 mr-2">•</span> AI สแกนหุ้น SET100+ และหุ้นที่น่าสนใจประมาณ 200 ตัว</li>
+                    <li class="flex items-start"><span class="text-blue-400 mr-2">•</span> ใช้ Price & Trend Patterns และ DEMA(40) ตรวจจับจังหวะการเปลี่ยนแปลงแนวโน้ม</li>
+                    <li class="flex items-start"><span class="text-blue-400 mr-2">•</span> เลือกติดตามได้สูงสุด 4 หุ้นพร้อมกัน</li>
+                    <li class="flex items-start"><span class="text-blue-400 mr-2">•</span> ติดตามหุ้นแต่ละตัวเป็นเวลา 7 วัน</li>
+                    <li class="flex items-start"><span class="text-blue-400 mr-2">•</span> ส่งรายงานผ่าน LINE ทุกวันในช่วงเช้า ประมาณ 10:30–11:00 น.</li>
+                    <li class="flex items-start"><span class="text-blue-400 mr-2">•</span> แสดงกราฟ ราคา ค่า DEMA(40) ความชัน และสถานะ BUY / SELL ตามเงื่อนไขของระบบ</li>
+                </ul>
+                <p class="text-sm text-blue-400 font-medium pt-2">
+                    คุณจึงไม่จำเป็นต้องเฝ้ากราฟตลอดเวลา แต่ยังมีรายงานติดตามหุ้นที่เลือกอย่างต่อเนื่อง
+                </p>
+            </div>
+        </div>
+
+        <!-- Tool 5: Search -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-dark-800/60 border border-gray-800 p-8 sm:p-10 rounded-3xl">
+            <div class="lg:col-span-5 bg-dark-900 border border-gray-700/60 rounded-2xl h-72 flex items-center justify-center text-gray-500 relative overflow-hidden">
+                <div class="absolute inset-0 bg-gradient-to-br from-teal-500/10 to-transparent flex items-center justify-center text-center p-6">
+                    <div>
+                        <div class="text-4xl mb-2">🔍</div>
+                        <span class="text-sm font-medium text-gray-400">รูปภาพจำลอง: Stock Search & Ratios</span>
+                    </div>
+                </div>
+            </div>
+            <div class="lg:col-span-7 space-y-4">
+                <div class="inline-block bg-teal-500/10 text-teal-400 text-xs font-semibold px-3 py-1 rounded-full">เครื่องมือที่ 5</div>
+                <h3 class="text-2xl font-bold text-gray-100">ระบบค้นหาหุ้นพร้อมข้อมูลสำคัญ</h3>
+                <p class="text-gray-300 text-base">
+                    อยากรู้ว่าหุ้นตัวหนึ่งมีพื้นฐานและแนวโน้มเป็นอย่างไร? ค้นหาชื่อหุ้นได้ทั้งหุ้นไทยและหุ้นสหรัฐฯ ที่ระบบรองรับ
+                </p>
+                <ul class="space-y-2 text-sm text-gray-300">
+                    <li class="flex items-start"><span class="text-teal-400 mr-2">•</span> ดู Financial Ratios เช่น P/E, P/BV, ROE และข้อมูลสำคัญอื่น ๆ</li>
+                    <li class="flex items-start"><span class="text-teal-400 mr-2">•</span> ดูแนวโน้มราคา เช่น Uptrend และ Sideways</li>
+                    <li class="flex items-start"><span class="text-teal-400 mr-2">•</span> สำหรับนักลงทุนสาย VI ที่มองหาหุ้นปันผล มีตารางจัดอันดับหุ้นไทยตาม Dividend Yield จากมากไปน้อย (DESC)</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Tool 6: Multi-Asset Chart -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-dark-800/60 border border-gray-800 p-8 sm:p-10 rounded-3xl">
+            <div class="lg:col-span-5 bg-dark-900 border border-gray-700/60 rounded-2xl h-72 flex items-center justify-center text-gray-500 relative overflow-hidden lg:order-last">
+                <div class="absolute inset-0 bg-gradient-to-br from-amber-500/10 to-transparent flex items-center justify-center text-center p-6">
+                    <div>
+                        <div class="text-4xl mb-2">📈</div>
+                        <span class="text-sm font-medium text-gray-400">รูปภาพจำลอง: Multi-Asset Chart</span>
+                    </div>
+                </div>
+            </div>
+            <div class="lg:col-span-7 space-y-4 lg:order-first">
+                <div class="inline-block bg-amber-500/10 text-amber-400 text-xs font-semibold px-3 py-1 rounded-full">เครื่องมือที่ 6</div>
+                <h3 class="text-2xl font-bold text-gray-100">Multi-Asset Chart – วิเคราะห์ได้มากกว่าหุ้นไทย</h3>
+                <p class="text-gray-300 text-sm">
+                    ไม่ว่าจะเป็นหุ้นสหรัฐฯ ยอดนิยม ทองคำ Gold หรือ Bitcoin (BTC) ก็สามารถเลือกสินทรัพย์และ Timeframe ได้ตามที่ระบบรองรับ เครื่องมือประกอบการวิเคราะห์ ได้แก่:
+                </p>
+                <ul class="space-y-2 text-sm text-gray-300">
+                    <li class="flex items-start"><span class="text-amber-400 mr-2">•</span> Volume Profile พร้อม POC, VAH, VAL</li>
+                    <li class="flex items-start"><span class="text-amber-400 mr-2">•</span> Fibonacci</li>
+                    <li class="flex items-start"><span class="text-amber-400 mr-2">•</span> Trendline</li>
+                    <li class="flex items-start"><span class="text-amber-400 mr-2">•</span> Support & Resistance</li>
+                    <li class="flex items-start"><span class="text-amber-400 mr-2">•</span> เลือก Timeframe ได้เอง</li>
+                    <li class="flex items-start"><span class="text-amber-400 mr-2">•</span> และยังมี AI Analysis แสดงผลเป็น Gauge Meter ตั้งแต่ Strong Sell, Sell, Neutral, Buy, Strong Buy ไปจนถึง Carefully Buy</li>
+                </ul>
+                <p class="text-xs text-amber-300/80 bg-amber-500/10 p-3 rounded-xl border border-amber-500/20 mt-4">
+                    *หุ้นสหรัฐฯ รองรับเฉพาะหุ้นยอดนิยมที่ระบบเปิดให้ใช้งานในปัจจุบัน*
+                </p>
+            </div>
+        </div>
+
+        <!-- Tool 7: Ask AI (ใส่รูปภาพจริงจากภาพที่แนบมาล่าสุด) -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-dark-800/60 border border-gray-800 p-8 sm:p-10 rounded-3xl">
+            <div class="lg:col-span-5 bg-dark-900 border border-gray-700/60 rounded-2xl overflow-hidden shadow-xl flex items-center justify-center p-2">
+                <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80" alt="มาพร้อมระบบ Ask AI" class="rounded-xl w-full h-auto object-cover max-h-80">
+            </div>
+            <div class="lg:col-span-7 space-y-4">
+                <div class="inline-block bg-purple-500/10 text-purple-400 text-xs font-semibold px-3 py-1 rounded-full">เครื่องมือที่ 7</div>
+                <h3 class="text-2xl font-bold text-gray-100">มาพร้อมระบบ Ask AI – ถามเรื่องหุ้น ให้ AI ช่วยค้นและวิเคราะห์</h3>
+                <p class="text-gray-300 text-sm">
+                    สมาชิก Premium และ Ultimate สามารถใช้ Ask AI เพื่อสอบถามข้อมูลหุ้นและประเด็นการลงทุนที่ระบบรองรับ เช่น:
+                </p>
+                <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-gray-300">
+                    <li class="bg-dark-900/60 p-3 rounded-xl border border-gray-800 flex items-center"><span class="text-purple-400 mr-2">✓</span> วิเคราะห์แนวรับ แนวต้าน แนวโน้ม</li>
+                    <li class="bg-dark-900/60 p-3 rounded-xl border border-gray-800 flex items-center"><span class="text-purple-400 mr-2">✓</span> ตรวจสอบอัตราส่วนทางการเงิน</li>
+                    <li class="bg-dark-900/60 p-3 rounded-xl border border-gray-800 flex items-center"><span class="text-purple-400 mr-2">✓</span> ดูข้อมูลปันผลและประวัติ Dividend Yield</li>
+                    <li class="bg-dark-900/60 p-3 rounded-xl border border-gray-800 flex items-center"><span class="text-purple-400 mr-2">✓</span> ตรวจสอบ Volume ย้อนหลัง</li>
+                    <li class="bg-dark-900/60 p-3 rounded-xl border border-gray-800 flex items-center"><span class="text-purple-400 mr-2">✓</span> สรุปข่าวสำคัญของหุ้น</li>
+                    <li class="bg-dark-900/60 p-3 rounded-xl border border-gray-800 flex items-center"><span class="text-purple-400 mr-2">✓</span> ดูข้อมูลผู้ถือหุ้นใหญ่และผลประกอบการ</li>
+                    <li class="bg-dark-900/60 p-3 rounded-xl border border-gray-800 flex items-center"><span class="text-purple-400 mr-2">✓</span> แนวทางวิเคราะห์หุ้นที่ติดดอย</li>
+                    <li class="bg-dark-900/60 p-3 rounded-xl border border-gray-800 flex items-center"><span class="text-purple-400 mr-2">✓</span> วิเคราะห์ภาพรวมตลาด SET และ SET50</li>
+                </ul>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- LINE Integration Highlight Section -->
+    <section class="py-12 bg-dark-800/40 border-t border-gray-800">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center bg-dark-800 border border-gray-700/80 rounded-3xl p-8 sm:p-10 shadow-2xl">
+            <div class="w-14 h-14 bg-emerald-500/10 text-emerald-400 rounded-2xl flex items-center justify-center text-2xl mx-auto mb-4">💬</div>
+            <h3 class="text-xl sm:text-2xl font-bold mb-3">ใช้งานผ่าน LINE สะดวกทุกที่</h3>
+            <p class="text-gray-300 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">
+                ทั้งหมดนี้ใช้งานผ่าน LINE สะดวกทุกที่ ไม่จำเป็นต้องเปิดคอมพิวเตอร์หรือเข้าเว็บไซต์ทุกครั้งที่ต้องการติดตามข้อมูล Go Go Trader เชื่อมการแจ้งเตือนและการใช้งานที่รองรับเข้ากับ LINE ทำให้คุณรับรายงานและข้อมูลสำคัญได้สะดวกผ่านโทรศัพท์มือถือ
+            </p>
+        </div>
+    </section>
+
+    <!-- Pricing & Packages Section -->
+    <section class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+            <h2 class="text-3xl font-bold mb-4">เลือกแพ็กเกจที่เหมาะกับสไตล์การลงทุน</h2>
+            <p class="text-gray-400">เปรียบเทียบสิทธิการใช้งานและราคาที่คุ้มค่าที่สุดสำหรับคุณ</p>
+        </div>
+
+        <!-- Feature Comparison Table -->
+        <div class="bg-dark-800 border border-gray-700/80 rounded-3xl overflow-hidden mb-16 shadow-2xl">
+            <div class="overflow-x-auto">
+                <table class="w-full text-left border-collapse">
+                    <thead>
+                        <tr class="border-b border-gray-700 bg-dark-700/50 text-gray-200 text-sm">
+                            <th class="p-4 sm:p-6">สิทธิ์การใช้งาน</th>
+                            <th class="p-4 sm:p-6 text-center">Pro</th>
+                            <th class="p-4 sm:p-6 text-center text-brand">Premium</th>
+                            <th class="p-4 sm:p-6 text-center text-blue-400">Ultimate</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-800 text-sm text-gray-300">
+                        <tr>
+                            <td class="p-4 sm:p-6 font-medium text-gray-200">Search / addStock</td>
+                            <td class="p-4 sm:p-6 text-center text-emerald-400">✓</td>
+                            <td class="p-4 sm:p-6 text-center text-emerald-400">✓</td>
+                            <td class="p-4 sm:p-6 text-center text-emerald-400">✓</td>
+                        </tr>
+                        <tr>
+                            <td class="p-4 sm:p-6 font-medium text-gray-200">Screener SET100++</td>
+                            <td class="p-4 sm:p-6 text-center text-emerald-400">✓</td>
+                            <td class="p-4 sm:p-6 text-center text-emerald-400">✓</td>
+                            <td class="p-4 sm:p-6 text-center text-emerald-400">✓</td>
+                        </tr>
+                        <tr>
+                            <td class="p-4 sm:p-6 font-medium text-gray-200">US Stocks / Gold / BTC</td>
+                            <td class="p-4 sm:p-6 text-center text-gray-500">–</td>
+                            <td class="p-4 sm:p-6 text-center text-emerald-400">✓</td>
+                            <td class="p-4 sm:p-6 text-center text-emerald-400">✓</td>
+                        </tr>
+                        <tr>
+                            <td class="p-4 sm:p-6 font-medium text-gray-200">Ask AI</td>
+                            <td class="p-4 sm:p-6 text-center text-gray-500">–</td>
+                            <td class="p-4 sm:p-6 text-center text-emerald-400">✓</td>
+                            <td class="p-4 sm:p-6 text-center text-emerald-400">✓</td>
+                        </tr>
+                        <tr>
+                            <td class="p-4 sm:p-6 font-medium text-gray-200">AI %CMPR</td>
+                            <td class="p-4 sm:p-6 text-center text-gray-500">–</td>
+                            <td class="p-4 sm:p-6 text-center text-emerald-400">✓</td>
+                            <td class="p-4 sm:p-6 text-center text-emerald-400">✓</td>
+                        </tr>
+                        <tr>
+                            <td class="p-4 sm:p-6 font-medium text-gray-200">SuperTrend</td>
+                            <td class="p-4 sm:p-6 text-center text-gray-500">–</td>
+                            <td class="p-4 sm:p-6 text-center text-gray-500">–</td>
+                            <td class="p-4 sm:p-6 text-center text-emerald-400">✓</td>
+                        </tr>
+                        <tr>
+                            <td class="p-4 sm:p-6 font-medium text-gray-200">ZoneBreakOut</td>
+                            <td class="p-4 sm:p-6 text-center text-gray-500">–</td>
+                            <td class="p-4 sm:p-6 text-center text-gray-500">–</td>
+                            <td class="p-4 sm:p-6 text-center text-emerald-400">✓</td>
+                        </tr>
+                        <tr>
+                            <td class="p-4 sm:p-6 font-medium text-gray-200">S/R + Fibonacci</td>
+                            <td class="p-4 sm:p-6 text-center text-emerald-400">✓</td>
+                            <td class="p-4 sm:p-6 text-center text-emerald-400">✓</td>
+                            <td class="p-4 sm:p-6 text-center text-emerald-400">✓</td>
+                        </tr>
+                        <tr class="bg-dark-700/30 font-semibold text-gray-200">
+                            <td class="p-4 sm:p-6">โควตา Add Stock</td>
+                            <td class="p-4 sm:p-6 text-center">10 ตัว</td>
+                            <td class="p-4 sm:p-6 text-center">20 ตัว</td>
+                            <td class="p-4 sm:p-6 text-center">30 ตัว</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Pricing Tables -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
+            <!-- Table 1: Package Prices -->
+            <div class="bg-dark-800 border border-gray-700/80 rounded-3xl p-6 sm:p-8 shadow-xl">
+                <h3 class="text-xl font-bold mb-4 text-brand">ราคาแพ็กเกจ</h3>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left text-sm text-gray-300">
+                        <thead>
+                            <tr class="border-b border-gray-700 text-gray-400">
+                                <th class="py-3">แพ็กเกจ</th>
+                                <th class="py-3 text-right">6 เดือน</th>
+                                <th class="py-3 text-right">รายปี</th>
+                                <th class="py-3 text-right">โบนัสรายปี</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-800">
+                            <tr>
+                                <td class="py-3 font-semibold text-gray-200">Pro</td>
+                                <td class="py-3 text-right">720 บาท</td>
+                                <td class="py-3 text-right">1,440 บาท</td>
+                                <td class="py-3 text-right text-gray-500">–</td>
+                            </tr>
+                            <tr>
+                                <td class="py-3 font-semibold text-brand">Premium</td>
+                                <td class="py-3 text-right">1,500 บาท</td>
+                                <td class="py-3 text-right">3,000 บาท</td>
+                                <td class="py-3 text-right text-brand">+1 เดือน</td>
+                            </tr>
+                            <tr>
+                                <td class="py-3 font-semibold text-blue-400">Ultimate</td>
+                                <td class="py-3 text-right">2,100 บาท</td>
+                                <td class="py-3 text-right">4,200 บาท</td>
+                                <td class="py-3 text-right text-blue-400">+3 เดือน</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Table 2: Average Monthly/Daily -->
+            <div class="bg-dark-800 border border-gray-700/80 rounded-3xl p-6 sm:p-8 shadow-xl">
+                <h3 class="text-xl font-bold mb-4 text-blue-400">ราคาเฉลี่ยต่อเดือนและต่อวัน (เมื่อสมัครรายปี)</h3>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left text-sm text-gray-300">
+                        <thead>
+                            <tr class="border-b border-gray-700 text-gray-400">
+                                <th class="py-3">แพ็กเกจ</th>
+                                <th class="py-3 text-right">อายุใช้งานรวมโบนัส</th>
+                                <th class="py-3 text-right">เฉลี่ย/เดือน</th>
+                                <th class="py-3 text-right">เฉลี่ย/วัน</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-800">
+                            <tr>
+                                <td class="py-3 font-semibold text-gray-200">Pro</td>
+                                <td class="py-3 text-right">12 เดือน</td>
+                                <td class="py-3 text-right">120 บาท</td>
+                                <td class="py-3 text-right">3.95 บาท</td>
+                            </tr>
+                            <tr>
+                                <td class="py-3 font-semibold text-brand">Premium</td>
+                                <td class="py-3 text-right">13 เดือน</td>
+                                <td class="py-3 text-right">230.77 บาท</td>
+                                <td class="py-3 text-right">7.59 บาท</td>
+                            </tr>
+                            <tr>
+                                <td class="py-3 font-semibold text-blue-400">Ultimate</td>
+                                <td class="py-3 text-right">15 เดือน</td>
+                                <td class="py-3 text-right">280 บาท</td>
+                                <td class="py-3 text-right">9.21 บาท</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <p class="text-xs text-gray-500 text-center mb-12">
+            *ราคาเฉลี่ยเป็นการคำนวณจากค่าสมัครรายปีหารด้วยระยะเวลาใช้งานรวมโบนัส ไม่ใช่แพ็กเกจสมัครรายเดือน
+        </p>
+
+        <!-- Trial Section -->
+        <div class="bg-gradient-to-br from-dark-800 to-dark-900 border-2 border-brand/60 rounded-3xl p-8 sm:p-12 text-center max-w-4xl mx-auto shadow-2xl relative overflow-hidden">
+            <div class="absolute -right-10 -bottom-10 text-9xl text-brand/5 font-bold select-none pointer-events-none">FREE</div>
+            <h3 class="text-2xl sm:text-3xl font-bold mb-4">ทดลองใช้งานฟรี 30 วัน</h3>
+            <p class="text-gray-300 text-base sm:text-lg mb-6 max-w-2xl mx-auto leading-relaxed">
+                พร้อมสิทธิ์ทดลองใช้ด้วยสิทธิ์เทียบเท่า Ultimate ทุกฟีเจอร์และโควตา เพื่อให้คุณได้สัมผัสความสามารถของระบบก่อนตัดสินใจสมัครสมาชิก
+            </p>
+            <div class="text-xl font-semibold text-brand mb-8">
+                ค่าสมาชิกเพียงหลักร้อย แลกกับเวลาที่ประหยัดได้ทุกวัน
+            </div>
+            <p class="text-gray-400 text-sm">
+                ลองใช้งานฟรี 30 วัน แล้วสัมผัสผู้ช่วยลงทุนของคุณด้วยตัวเอง
+            </p>
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark-900 border-t border-gray-800 py-12 text-center text-sm text-gray-500">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <p class="mb-2">© Go Go Trader. All rights reserved.</p>
+            <p>แพลตฟอร์มช่วยวิเคราะห์และแจ้งเตือนข้อมูลหุ้น เพื่อประกอบการตัดสินใจลงทุน</p>
+        </div>
+    </footer>
+
+</body>
+</html>
