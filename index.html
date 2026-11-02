@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Go Go Trader - 7 เครื่องมืออัจฉริยะและแพ็กเกจการใช้งาน</title>
+    <title>Go Go Trader - 7 เครื่องมืออัจฉริยะและระบบสมัคร Trial ผ่าน LINE</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -22,6 +22,10 @@
                             DEFAULT: '#10b981',
                             dark: '#059669',
                             light: '#34d399',
+                        },
+                        line: {
+                            DEFAULT: '#06c755',
+                            hover: '#05b34c'
                         }
                     }
                 }
@@ -44,8 +48,11 @@
                 </div>
                 <span class="text-xl font-bold tracking-tight">Go Go Trader</span>
             </div>
-            <div class="text-sm font-medium text-brand bg-brand/10 border border-brand/20 px-4 py-1.5 rounded-full">
-                Stock Analysis & AI Alert Platform
+            <div>
+                <a href="https://lin.ee/6OokJsD" target="_blank" class="bg-line hover:bg-line-hover text-white px-4 py-2 rounded-xl font-medium text-sm shadow-lg shadow-line/20 transition flex items-center space-x-2">
+                    <span>🟢</span>
+                    <span>add LINE Trial</span>
+                </a>
             </div>
         </div>
     </header>
@@ -61,16 +68,24 @@
             <h1 class="text-4xl sm:text-6xl font-bold tracking-tight max-w-4xl mx-auto leading-tight mb-6">
                 7 เครื่องมือทรงพลัง <br class="hidden sm:inline"><span class="text-transparent bg-clip-text bg-gradient-to-r from-brand via-emerald-400 to-blue-500">ที่ช่วยให้การลงทุนเป็นระบบมากขึ้น</span>
             </h1>
-            <p class="text-lg sm:text-xl text-gray-400 max-w-3xl mx-auto mb-6 font-light leading-relaxed">
+            <p class="text-lg sm:text-xl text-gray-400 max-w-3xl mx-auto mb-8 font-light leading-relaxed">
                 เทรดอย่างมีข้อมูล เหมือนมีนักวิเคราะห์ส่วนตัวและผู้ช่วยรวบรวมข้อมูลอยู่ข้างคุณ ลดภาระการเปิดกราฟและเฝ้าราคาตลอดทั้งวัน
             </p>
+
+            <!-- Hero CTA Button for Trial -->
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+                <a href="https://lin.ee/6OokJsD" target="_blank" class="w-full sm:w-auto bg-line hover:bg-line-hover text-white px-8 py-4 rounded-2xl font-bold text-lg shadow-xl shadow-line/25 transition transform hover:-translate-y-0.5 flex items-center justify-center space-x-3">
+                    <span class="text-2xl">🟢</span>
+                    <span>ทดลองใช้งานฟรี 30 วัน ผ่าน LINE</span>
+                </a>
+            </div>
         </div>
     </section>
 
     <!-- 7 Tools Section (Alternating Layout) -->
     <section class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-24">
 
-        <!-- Tool 1: Price Alert (มีรูปภาพจริง) -->
+        <!-- Tool 1: Price Alert -->
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-dark-800/60 border border-gray-800 p-8 sm:p-10 rounded-3xl">
             <div class="lg:col-span-5 bg-dark-900 border border-gray-700/60 rounded-2xl overflow-hidden shadow-xl flex items-center justify-center p-2">
                 <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=800&q=80" alt="ระบบ Price Alert" class="rounded-xl w-full h-auto object-cover max-h-80">
@@ -84,7 +99,7 @@
             </div>
         </div>
 
-        <!-- Tool 2: AI %CMPR (มีรูปภาพจริง) -->
+        <!-- Tool 2: AI %CMPR -->
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-dark-800/60 border border-gray-800 p-8 sm:p-10 rounded-3xl">
             <div class="lg:col-span-5 bg-dark-900 border border-gray-700/60 rounded-2xl overflow-hidden shadow-xl flex items-center justify-center p-2 lg:order-last">
                 <img src="https://images.unsplash.com/photo-1642543492481-44e81e3914a7?auto=format&fit=crop&w=800&q=80" alt="ระบบ AI %CMPR" class="rounded-xl w-full h-auto object-cover max-h-80">
@@ -216,7 +231,7 @@
             </div>
         </div>
 
-        <!-- Tool 7: Ask AI (ใส่รูปภาพจริงจากภาพที่แนบมาล่าสุด) -->
+        <!-- Tool 7: Ask AI -->
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-dark-800/60 border border-gray-800 p-8 sm:p-10 rounded-3xl">
             <div class="lg:col-span-5 bg-dark-900 border border-gray-700/60 rounded-2xl overflow-hidden shadow-xl flex items-center justify-center p-2">
                 <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80" alt="มาพร้อมระบบ Ask AI" class="rounded-xl w-full h-auto object-cover max-h-80">
@@ -413,14 +428,40 @@
             *ราคาเฉลี่ยเป็นการคำนวณจากค่าสมัครรายปีหารด้วยระยะเวลาใช้งานรวมโบนัส ไม่ใช่แพ็กเกจสมัครรายเดือน
         </p>
 
-        <!-- Trial Section -->
-        <div class="bg-gradient-to-br from-dark-800 to-dark-900 border-2 border-brand/60 rounded-3xl p-8 sm:p-12 text-center max-w-4xl mx-auto shadow-2xl relative overflow-hidden">
-            <div class="absolute -right-10 -bottom-10 text-9xl text-brand/5 font-bold select-none pointer-events-none">FREE</div>
-            <h3 class="text-2xl sm:text-3xl font-bold mb-4">ทดลองใช้งานฟรี 30 วัน</h3>
-            <p class="text-gray-300 text-base sm:text-lg mb-6 max-w-2xl mx-auto leading-relaxed">
-                พร้อมสิทธิ์ทดลองใช้ด้วยสิทธิ์เทียบเท่า Ultimate ทุกฟีเจอร์และโควตา เพื่อให้คุณได้สัมผัสความสามารถของระบบก่อนตัดสินใจสมัครสมาชิก
+        <!-- Trial Section with LINE Button & QR Code -->
+        <div class="bg-gradient-to-br from-dark-800 to-dark-900 border-2 border-line/60 rounded-3xl p-8 sm:p-12 text-center max-w-3xl mx-auto shadow-2xl relative overflow-hidden">
+            <div class="w-16 h-16 bg-line/10 text-line rounded-2xl flex items-center justify-center text-3xl mx-auto mb-6">🟢</div>
+            <h3 class="text-2xl sm:text-3xl font-bold mb-3">ทดลอง Go Go Trader ฟรี 30 วัน</h3>
+            <p class="text-gray-300 text-base mb-6">
+                เริ่มต้นใช้งานด้วย LINE ไม่ต้องกรอกแบบฟอร์มยาวบนเว็บไซต์ พร้อมรับสิทธิ์ทดลองใช้เทียบเท่า Ultimate ทุกฟีเจอร์
             </p>
-            <div class="text-xl font-semibold text-brand mb-8">
+
+            <!-- LINE Add Friend Button -->
+            <div class="mb-8">
+                <a href="https://lin.ee/6OokJsD" target="_blank" class="inline-flex items-center justify-center space-x-3 bg-line hover:bg-line-hover text-white text-lg font-bold px-8 py-4 rounded-2xl shadow-xl shadow-line/30 transition transform hover:-translate-y-0.5">
+                    <span>🟢</span>
+                    <span>เพิ่มเพื่อนเพื่อสมัคร Trial</span>
+                </a>
+            </div>
+
+            <!-- QR Code Display -->
+            <div class="bg-white p-4 rounded-2xl inline-block shadow-lg mb-6">
+                <img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=https://lin.ee/6OokJsD" alt="QR Code Add LINE" class="w-40 h-40 object-contain mx-auto">
+                <p class="text-xs text-gray-600 mt-2 font-medium">สแกนเพื่อเพิ่มเพื่อนผ่าน LINE</p>
+            </div>
+
+            <!-- Steps -->
+            <div class="text-left bg-dark-900/60 p-6 rounded-2xl border border-gray-800 max-w-xl mx-auto mb-8">
+                <h4 class="text-sm font-semibold text-gray-200 mb-3 text-center">ขั้นตอนการสมัคร</h4>
+                <ol class="space-y-2 text-sm text-gray-300 list-decimal list-inside">
+                    <li>กดปุ่มเพิ่มเพื่อนจากเว็บไซต์ หรือสแกน QR Code</li>
+                    <li>เข้าสู่ LINE Official Account</li>
+                    <li>เพิ่มเพื่อนและทำตามขั้นตอนสมัคร Trial</li>
+                    <li>เริ่มทดลองใช้สิทธิ์ Ultimate เป็นเวลา 30 วัน</li>
+                </ol>
+            </div>
+
+            <div class="text-lg font-semibold text-brand mb-2">
                 ค่าสมาชิกเพียงหลักร้อย แลกกับเวลาที่ประหยัดได้ทุกวัน
             </div>
             <p class="text-gray-400 text-sm">
